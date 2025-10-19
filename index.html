@@ -13,12 +13,13 @@
     <!-- <script src="https://flackr.github.io/scroll-timeline/dist/scroll-timeline.js"></script>  -->
 </head>
 <body>
+    <div id="home"></div>
 
     <header> <!-- header  -->
         <div class="logo">Nikhil-<span>Desk</span></div>
         <nav>
             <ul class="nav-links">
-                <li><a href="#home" id="home">Home</a></li>
+                <li><a href="#home">Home</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#project">projects</a></li>
                 <li><a href="#contact">Contact</a></li>
@@ -30,25 +31,32 @@
     </header>
 
     <!-- loading screen -->
+
     <div class="loading">
         <div class="loader" id="loader"></div>
         <pre>
             <p>Welcome to the Nikhil Portfolio..</p>
             <p>please scroll down</p>
         </pre>
+        <div id="about"></div>
     </div>
 
     <!-- main container -->
-    <div id="about"></div>
+    
     <main>
         <!-- containerA about -->
         <div id="containerA" class="containerA">
             <h3 id="containerAHead">About me <i class="fas fa-arrow-down" id="downarrow"></i></h3>
             <article id="paraA">
-                <p id="about">
-                    👋 Hello! I'm Nikhil, a passionate front-end developer and computer science student at Maharaja Surajmal Institute of Technology (MSIT), specializing in CSE. With over two years of experience in front-end development, primarily using JavaScript, React, and WordPress, I've honed my skills in creating interactive, user-centric web applications that enhance digital experiences.
-    
-                </p>
+                <p className="text-gray-600 leading-relaxed">
+                    👋 Hello! I'm <span className="text-blue-600 font-medium">Nikhil</span>, an AI-powered full-stack MERN developer and Computer Science student at 
+                    <span className="font-medium text-gray-800"> Maharaja Surajmal Institute of Technology (MSIT)</span>. 
+                    With strong expertise in <span className="font-medium text-gray-800">Next.js, React, Node.js, Express, and MongoDB</span>, 
+                    I specialize in building intelligent, high-performance, and scalable web applications. 
+                    My passion lies in integrating AI with modern web technologies to craft seamless, 
+                    user-focused digital experiences that bridge innovation and usability.
+                  </p>
+                  
             </article>
         </div>
         <!-- containerA about end -->
@@ -71,8 +79,8 @@
                             <td>Web-Dev 
                                 <div class="lvl">
                                     
-                                    <li>HTML,CSS,JS,PYTHON</li>
-                                    <li>REACT,NODE,MYSQL</li>
+                                    <li>Ai Powered Web Development</li>
+                                    <li>MERN,NEXTJS,MYSQL</li>
                                     
                                 </div>
                             </td>
@@ -120,18 +128,21 @@
                     <a href="https://nikhil-dex.github.io/managemedia-dev/">Managemedia</a>
                     <a href="https://nikhil-dex.github.io/merkinfra-dev/">Merkinfra</a>
                     <a href="https://nikhil-dex.github.io/flipkart-clone-dev/">Flipkart</a>
+                    <a href="https://nikhil-dex.github.io/flipkart-clone-dev/">AI-chatbot</a>
                 </div>
                 <div class="eleC">
                     <h3>Game-Projects</h3>
                     <a href="https://nikhil-dex.github.io/Game-venom-dev/">Venom-game</a>
                     <a href="https://nikhil-dex.github.io/ti-tac-toe-game-dev/">tic-tac-toe</a>
                     <a href="https://nikhil-dex.github.io/rock-paper-scissor-game-dev/">rock-paper-scissor</a>
+                    <a href="#">-</a>
                 </div>
                 <div class="eleC">
                     <h3>Other-Projects</h3>
                     <a href="https://nikhil-dex.github.io/currency-converter-dev/">currency-converter</a>
                     <a href="https://nikhil-dex.github.io/analogwatch-dev/">analog-watch</a>
                     <a href="https://nikhil-dex.github.io/todo-list-dev/">todo-list</a>
+                    <a href="#">-</a>
                 </div>
                 
             </div>
@@ -157,7 +168,7 @@
                 </a>
             </div>
             <div class="eleA">
-                    <a href="https://www.instagram.com/drip_nikhil/profilecard/?igsh=MWJmZmRyYTFidG1tZA==">
+                    <a href="https://www.instagram.com/krishna.jsx?igsh=MTV3MnMzcHE2NGpybw%3D%3D&utm_source=qr">
 
                     <i style="font-size:24px; color: rgb(252, 118, 141);" class="fa">&#xf16d;</i>
                 </a>
@@ -178,7 +189,7 @@
             </div>
             <div class="form-main">
                 <form
-                action="send_email.php"
+                action="https://formspree.io/f/YOUR_FORM_ID"
                 method="post"
                 id="myForm"
                 onsubmit="return validateForm()"

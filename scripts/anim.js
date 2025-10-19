@@ -6,7 +6,8 @@ function logScreenSize() {
 // Add an event listener to detect changes in screen size
 window.addEventListener('resize', logScreenSize);
 console.log(logScreenSize())
-// Function to detect the browserfunction detectBrowser() {
+
+// Function to detect the browser
 function detectBrowser() {
     const userAgent = navigator.userAgent;
 if (userAgent.indexOf("Firefox") > -1) {
@@ -48,6 +49,10 @@ function applyBrowserClass() {
     } else if (browser === "safari") {
       
     } else if (browser === "ie") {
+    const elementA = document.querySelector(".containerA")
+    const elementB = document.querySelector(".containerB")
+    const elementC = document.querySelector(".containerC")
+    const elementD = document.querySelector(".containerD")
     transit(elementA)
     transitB(elementB)
     transitB(elementC)
@@ -62,6 +67,15 @@ function applyBrowserClass() {
 
 // Apply the class when the document is ready
 document.addEventListener("DOMContentLoaded", applyBrowserClass);
+
+// Performance optimization: Debounce resize events
+let resizeTimeout;
+window.addEventListener('resize', function() {
+    clearTimeout(resizeTimeout);
+    resizeTimeout = setTimeout(function() {
+        logScreenSize();
+    }, 250);
+});
 
 
 function transit(element){
@@ -99,7 +113,7 @@ function transitB(element){
         if (entry.isIntersecting) {
           entry.target.classList.add('fadeAlpha');
         } else {
-          entry.target.classList.remove('fadeAplha');
+          entry.target.classList.remove('fadeAlpha');
         }
         });
         };

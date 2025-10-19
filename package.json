@@ -1,0 +1,39 @@
+{
+  "name": "nikhil-portfolio",
+  "version": "2.0.0",
+  "description": "Modern portfolio website for Nikhil - Front-end Developer",
+  "main": "index.html",
+  "scripts": {
+    "dev": "live-server --port=3000 --open=/",
+    "build": "npm run minify-css && npm run minify-js",
+    "minify-css": "cleancss -o styles/main.min.css styles/main.css",
+    "minify-js": "terser js/main.js -o js/main.min.js -c -m",
+    "lighthouse": "lighthouse http://localhost:3000 --output html --output-path ./lighthouse-report.html",
+    "test": "echo \"No tests specified\" && exit 0"
+  },
+  "keywords": [
+    "portfolio",
+    "frontend",
+    "developer",
+    "javascript",
+    "react",
+    "modern",
+    "responsive"
+  ],
+  "author": "Nikhil",
+  "license": "MIT",
+  "devDependencies": {
+    "live-server": "^1.2.2",
+    "clean-css-cli": "^5.6.2",
+    "terser": "^5.19.4",
+    "lighthouse": "^11.0.0"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead"
+  ],
+  "engines": {
+    "node": ">=14.0.0"
+  }
+}
